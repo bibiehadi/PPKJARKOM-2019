@@ -43,26 +43,27 @@ $neighbors = $this->mikrotik->getNeighbours();
 
  	public function usersJSON(){
  		$users = $this->mikrotik->getUsers();
- 		foreach ($users as $user) {
- 						$data['user_id'] = $user['.id'];
-						// $data['user_server'] = $user['server'];
-						$data['user_name'] = $user['name'];
-						// $data['user_address'] = $user['address'];
-						// $data['user_mac'] = $user['mac-address'];
-						// $data['user_profile'] = $user['profile'];
-						$data['user_uptime'] = $user['uptime'];
-						// $device = $user;
-						// $user['action']= '<a class="add_device btn btn-sm btn-primary" href="javascript:void(0)" title="addDevice" data-id='."'".$connect['device_id']."'".' data-identity='."'".$connect['device_identity']."'".' data-mac='."'".$connect['device_MAC']."'".' data-ip='."'".$connect['device_IPv4']."'".' data-version='."'".$connect['device_OSVersion']."'".'><i class="glyphicon glyphicon-k"><i>..<a>';
-						$allUser[]=$data;
- 					}
+ 		print_r($users);
+ 	// 	foreach ($users as $user) {
+ 	// 					$data['user_id'] = $user['.id'];
+		// 				// $data['user_server'] = $user['server'];
+		// 				$data['user_name'] = $user['name'];
+		// 				// $data['user_address'] = $user['address'];
+		// 				// $data['user_mac'] = $user['mac-address'];
+		// 				// $data['user_profile'] = $user['profile'];
+		// 				$data['user_uptime'] = $user['uptime'];
+		// 				// $device = $user;
+		// 				// $user['action']= '<a class="add_device btn btn-sm btn-primary" href="javascript:void(0)" title="addDevice" data-id='."'".$connect['device_id']."'".' data-identity='."'".$connect['device_identity']."'".' data-mac='."'".$connect['device_MAC']."'".' data-ip='."'".$connect['device_IPv4']."'".' data-version='."'".$connect['device_OSVersion']."'".'><i class="glyphicon glyphicon-k"><i>..<a>';
+		// 				$allUser[]=$data;
+ 	// 				}
 
 
-		$output = array(
-				"draw" => $this->input->post('draw'),
-				"data" => $allUser,
-			);
-		// print_r($output);
-		echo json_encode($output);
+		// $output = array(
+		// 		"draw" => $this->input->post('draw'),
+		// 		"data" => $allUser,
+		// 	);
+		// // print_r($output);
+		// echo json_encode($output);
  		// print_r($users);
  	}
 
