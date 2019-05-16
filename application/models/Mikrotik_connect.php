@@ -9,7 +9,7 @@ class Mikrotik_connect extends CI_Model {
 
 	}
 
-	public function connect($ip='192.168.1.1',$username='bibie',$password='66027822hadikusuma',$port='9999'){
+	public function connect($ip='192.168.122.56',$username='admin',$password='',$port=''){
 		if ($this->routerosapi->connect($ip,$username,$password,$port)) {
 			return true;
 		}else{
